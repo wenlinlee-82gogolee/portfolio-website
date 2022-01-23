@@ -16,23 +16,28 @@
 
   <body>
     <!--Navigation-->
-    <nav class="navbar">
-      <a href="#" class="navbar__about">About</a>
-      <a href="#" class="navbar__skills">Skills</a>
-      <a href="#" class="navbar__projects">Projects</a>
-      <a href="#" class="navbar__contact">Contact Me</a>
-    </nav>
+
     <!--Header-->
+
     <header class="header">
+      <div class="header__navbar">
+        <img src="images/bars.svg" alt="" class="navbar__icon" />
+        <nav class="navbar">
+          <a href="#" class="navbar__about">About</a>
+          <a href="#" class="navbar__skills">Skills</a>
+          <a href="#" class="navbar__projects">Projects</a>
+          <a href="#" class="navbar__contact">Contact</a>
+        </nav>
+      </div>
+
       <div class="header__text-box">
-        <h2 class="header__text  header__text-sub">Hi there!</h2>
+        <h2 class="header__text header__text-sub">Hi there!</h2>
         <br />
         <h1 class="header__text header__text-main">
           I'm <span class="header__text-bold">Wen-Lin</span>, a
           <span class="header__text-bold">Front-End Web Developer</span> and
           <span class="header__text-bold">Designer</span>!
         </h1>
-        <a href="#" class="btn-text">see my latest project</a>
       </div>
     </header>
 
@@ -40,114 +45,160 @@
       <!--About-->
       <section class="about">
         <div class="about__container">
-          <h2>WEN-LIN LEE</h2>
-          <h2>Front-end Web Developer and Designer</h2>
-          <p class="about__content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            vero incidunt deserunt unde labore at nostrum repudiandae.
-          </p>
-
-          <a href="#" class="about__contact-btn">Contact Me</a>
+          <h2>About Me</h2>
+          <div class="about__wrap">
+            <img src="/images/wenlinlee.svg" alt="" class="about__image" />
+            <p class="about__content">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
+              explicabo, accusantium molestias rem eligendi neque doloribus
+              consequuntur mollitia odit quibusdam assumenda in quasi.
+              Blanditiis fugit impedit veniam labore, doloribus laudantium
+              harum, asperiores itaque dicta ut quidem nulla ullam voluptate
+              similique est tempora officia velit laboriosam numquam
+              exercitationem quasi, inventore mollitia?
+            </p>
+          </div>
         </div>
       </section>
 
       <!--Skills-->
       <section class="skills">
         <div class="skills__container">
-          <h1>My Web Development journey started in 2021</h1>
-          <h2>Never Stop Exploring</h2>
-          <p class="skils__detail">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. In
-            doloremque tempore minus nisi neque veritatis quibusdam eveniet
-            ducimus praesentium numquam, tenetur unde fugit consequatur esse
-            perferendis nihil quas nam excepturi! Harum dolores aliquid sed
-            magni enim quidem excepturi dignissimos unde facilis, repudiandae
-            laudantium maiores incidunt nesciunt aspernatur nam ad voluptas
-            illum sapiente autem modi non eum quibusdam. Magnam, magni fuga.
-            Illum dicta placeat tempore, fugiat modi inventore reprehenderit
-            nihil dolor assumenda quisquam dolorem sequi nesciunt culpa soluta
-          </p>
+          <h1>Skills</h1>
+          <div class="skills__wrap">
+            <ul class="skills__list">
+              <li class="skills__list-items">html (SEO)</li>
+              <li class="skills__list-items">CSS (Flexbox, Grid, RWD)</li>
+              <li class="skills__list-items">JavaScript</li>
+              <li class="skills__list-items">git</li>
+              <li class="skills__list-items">jQuery</li>
+              <li class="skills__list-items">SASS/SCSS</li>
+              <li class="skills__list-items">bootstrap</li>
+              <li class="skills__list-items">React</li>
 
-          <ul class="skills__list">
-            <li class="skills__list-items">html</li>
-            <li class="skills__list-items">SEO</li>
-            <li class="skills__list-items">CSS</li>
-            <li class="skills__list-items">JavaScript</li>
-            <li class="skills__list-items">git</li>
-            <li class="skills__list-items">jQuery</li>
-            <li class="skills__list-items">sass</li>
-            <li class="skills__list-items">React</li>
-            <li class="skills__list-items">npm</li>
-            <li class="skills__list-items">linux command lines</li>
-            <li class="skills__list-items">node.js</li>
-            <li class="skills__list-items">figma</li>
-            <li class="skills__list-items">photoshop</li>
-          </ul>
-          <br />
+              <li class="skills__list-items">UI/UX</li>
+              <li class="skills__list-items">Figma</li>
+              <li class="skills__list-items">photoshop</li>
 
-          <p>to be continued...</p>
-          <br />
+              <li class="skills__list-items">npm</li>
+              <li class="skills__list-items">linux</li>
+              <li class="skills__list-items">node.js</li>
+            </ul>
+            <img src="/images/speech.svg" alt="" class="skills__image" />
+          </div>
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="projects__container">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects__wrap">
+            <div class="project__items-list">
+              <div class="project__item">
+                <div class="project">
+                  <img src="images/simon-game.png" alt="" />
+                  <div class="project__info">
+                    <h3>Simon Game</h3>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">javaScript</span>
+                    <span class="tag">jQuery</span>
+                    <button class="live-demo-button">Live Demo</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__item">
+                <div class="project">
+                  <img src="images/simon-game.png" alt="" />
+                  <div class="project__info">
+                    <h3>Simon Game</h3>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">javaScript</span>
+                    <span class="tag">jQuery</span>
+                    <button class="live-demo-button">Live Demo</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__item">
+                <div class="project">
+                  <img src="images/simon-game.png" alt="" />
+                  <div class="project__info">
+                    <h3>Simon Game</h3>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">javaScript</span>
+                    <span class="tag">jQuery</span>
+                    <button class="live-demo-button">Live Demo</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__item">
+                <div class="project">
+                  <img src="images/simon-game.png" alt="" />
+                  <div class="project__info">
+                    <h3>Simon Game</h3>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">javaScript</span>
+                    <span class="tag">jQuery</span>
+                    <button class="live-demo-button">Live Demo</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__item">
+                <div class="project">
+                  <img src="images/simon-game.png" alt="" />
+                  <div class="project__info">
+                    <h3>Simon Game</h3>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">javaScript</span>
+                    <span class="tag">jQuery</span>
+                    <button class="live-demo-button">Live Demo</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__item">
+                <div class="project">
+                  <img src="images/simon-game.png" alt="" />
+                  <div class="project__info">
+                    <h3>Simon Game</h3>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">javaScript</span>
+                    <span class="tag">jQuery</span>
+                    <button class="live-demo-button">Live Demo</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__item">7</div>
+              <div class="project__item">8</div>
+              <div class="project__item">9</div>
+              <div class="project__item">10</div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <section class="projects">
-      <div class="projects__container">
-        <div class="project">
-          <img
-            src="https://media.istockphoto.com/photos/pop-corn-and-on-red-armchair-cinema-picture-id1271522601?k=20&m=1271522601&s=612x612&w=0&h=y3NLBCVMWO8wHGwjEcXIuGOSL_0K6iFTvySCM-X5TxM="
-            alt=""
-          />
-          <div class="project-info">
-            <h3>Project Title</h3>
-            <div class="project-skills"></div>
-          </div>
-          <div class="project-overview">
-            <h3>Overview</h3>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
-            tenetur veniam illum laborum expedita at debitis magnam corrupti sequi
-            vel.
-          </div>
-
-          <div class="project">
-            <img
-              src="https://media.istockphoto.com/photos/pop-corn-and-on-red-armchair-cinema-picture-id1271522601?k=20&m=1271522601&s=612x612&w=0&h=y3NLBCVMWO8wHGwjEcXIuGOSL_0K6iFTvySCM-X5TxM="
-              alt=""
-            />
-            <div class="project-info">
-              <h3>Project Title</h3>
-              <div class="project-skills"></div>
-            </div>
-            <div class="project-overview">
-              <h3>Overview</h3>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
-              tenetur veniam illum laborum expedita at debitis magnam corrupti sequi
-              vel.
-            </div>
-
-            <div class="project">
-              <img
-                src="https://media.istockphoto.com/photos/pop-corn-and-on-red-armchair-cinema-picture-id1271522601?k=20&m=1271522601&s=612x612&w=0&h=y3NLBCVMWO8wHGwjEcXIuGOSL_0K6iFTvySCM-X5TxM="
-                alt=""
-              />
-              <div class="project-info">
-                <h3>Project Title</h3>
-                <div class="project-skills"></div>
-              </div>
-              <div class="project-overview">
-                <h3>Overview</h3>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
-                tenetur veniam illum laborum expedita at debitis magnam corrupti sequi
-                vel.
-              </div>
-      </div>
-    </section>
-
     <!--Footer-->
     <div class="footer">
-      <p>Copyrights @ 2021 Wen-Lin Lee. All rights reserved.</p>
+      <div class="contact">
+        <p>If you like my work, you can reach me</p>
+        <div class="email">Email: 82gogolee@gmail.com</div>
+        <div class="email">Github:</div>
+      </div>
+      <div class="copyright">
+        <p>Copyrights @ 2021 Wen-Lin Lee. All rights reserved.</p>
+      </div>
     </div>
-
-    <script src="index.html"></script>
+    <script src="script.js"></script>
   </body>
 </html>

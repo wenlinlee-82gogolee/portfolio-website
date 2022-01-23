@@ -1,6 +1,6 @@
 const nav = document.querySelector('.navbar');
 const fixNav = function () {
-  //   console.log(window.scrollY, nav.offsetHeight);
+  // console.log(window.scrollY, nav.offsetHeight);
   if (window.scrollY > nav.offsetHeight + 150) {
     nav.classList.add('active');
   } else {
