@@ -1,198 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wen-Lin Lee's Poforlio</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!--Navigation-->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wen-Lin Lee's Poforlio</title>
+  <link rel="icon" href="images/favicon.ico" type='image/x-icon'>
 
-    <!--Header-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Open+Sans+Condensed:wght@300;700&family=Ubuntu:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <ul class="navbar__container">
+        <!-- <a href="#" class="navbar__list logo">WEN-LIN LEE</a> -->
+        <a href="#about" class="navbar__list navbar__about">About</a>
+        <a href="#skills" class="navbar__list navbar__skills">Skills</a>
+        <a href="#projects" class="navbar__list navbar__projects">Projects</a>
+        <a href="#contact" class="navbar__list navbar__contact">Contact</a>
+      </ul>
+    </nav>
 
     <header class="header">
-      <div class="header__navbar">
-        <img src="images/bars.svg" alt="" class="navbar__icon" />
-        <nav class="navbar">
-          <a href="#" class="navbar__about">About</a>
-          <a href="#" class="navbar__skills">Skills</a>
-          <a href="#" class="navbar__projects">Projects</a>
-          <a href="#" class="navbar__contact">Contact</a>
-        </nav>
-      </div>
-
       <div class="header__text-box">
         <h2 class="header__text header__text-sub">Hi there!</h2>
         <br />
         <h1 class="header__text header__text-main">
           I'm <span class="header__text-bold">Wen-Lin</span>, a
-          <span class="header__text-bold">Front-End Developer</span> and
-          <span class="header__text-bold">Designer</span>!
+          <span class="header__text-bold">Front-End Developer</span>!
         </h1>
       </div>
     </header>
 
     <main>
       <!--About-->
-      <section class="about">
-        <div class="about__container">
-          <h2>About Me</h2>
+      <section class="about" id="about">
+        <div class="section about__container">
+            <h2 class="section__title">About Me</h2>
+            <div class="section__underline"></div>
           <div class="about__wrap">
-            <img src="/images/wenlinlee.svg" alt="" class="about__image" />
-            <p class="about__content">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
-              explicabo, accusantium molestias rem eligendi neque doloribus
-              consequuntur mollitia odit quibusdam assumenda in quasi.
-              Blanditiis fugit impedit veniam labore, doloribus laudantium
-              harum, asperiores itaque dicta ut quidem nulla ullam voluptate
-              similique est tempora officia velit laboriosam numquam
-              exercitationem quasi, inventore mollitia?
-            </p>
-          </div>
-        </div>
-      </section>
+            <div class="about__hi">
+              <img src="/images/wenlinlee.svg" alt="" class="about__image" />
+            </div>
 
-      <!--Skills-->
-      <section class="skills">
-        <div class="skills__container">
-          <h2 class="section-title">Skills</h2>
-          <div class="skills__wrap">
-            <ul class="skills__list">
-              <li class="skills__list-items">html (SEO)</li>
-              <li class="skills__list-items">CSS (Flexbox, Grid, RWD)</li>
-              <li class="skills__list-items">JavaScript</li>
-              <li class="skills__list-items">git</li>
-              <li class="skills__list-items">jQuery</li>
-              <li class="skills__list-items">SASS/SCSS</li>
-              <li class="skills__list-items">bootstrap</li>
-              <li class="skills__list-items">React</li>
+            <div class="about__content">
+              <pre class="about__meCode">
+                <code >
+                  const aboutWenLin = {
+                    name: ['<span class="value">李文菱</span>', '<span class="value">Wen-Lin Lee</span>'],
+                    email: '<span class="value">82gogolee@gmail.com</span>',
+                    gitHub:<span class="value">'wenlinlee-82gogolee'</span>,
+                    location: '<span class="value">Taiwan</span>',
+                    language: ['<span class="value">mandarin</span>', '<span class="value">english</span>', '<span class="value">taiwanese</span>'],
+                    education: '<span class="value">Bachelor of Business Administration</span>',
+                    jobExperience: '<span class="value">3 years of PM</span>',
+                    programmingSkills: [
+                      '<span class="value">html</span>', 
+                      '<span class="value">css</span>',
+                      '<span class="value">javaScript</span>',
+                      '<span class="value">react</span>',
+                      '<span class="value">jQuery</span>',
+                      '<span class="value">bootstrap</span>',
+                      '<span class="value">sass'</span>,
+                      '<span class="value">npm</span>',
+                      '<span class="value">mySQL</span>',
+                      '<span class="value">linux</span>',
+                      '<span class="value">figma</span>',
+                      '<span class="value">git</span>',
+                      '<span class="value">github</span>',
+                      ],
+                    desiredJob: ['<span class="value">front-end developer</span>','<span class="value">full-stack developer</span>'],
+                    introduceMySelf: function () {
+                      console.log(
+                        `I'M ${this.name[1].toUpperCase()}`
+                      );
+                      },
+                  };
 
-              <li class="skills__list-items">UI/UX</li>
-              <li class="skills__list-items">Figma</li>
-              <li class="skills__list-items">photoshop</li>
-
-              <li class="skills__list-items">npm</li>
-              <li class="skills__list-items">linux</li>
-              <li class="skills__list-items">node.js</li>
-            </ul>
-            <img src="/images/speech.svg" alt="" class="skills__image" />
-          </div>
-        </div>
-      </section>
-
-      <section class="projects">
-        <div class="projects__container">
-          <h2 class="section-title">Projects</h2>
-          <div class="projects__wrap">
-            <div class="project__items-list">
-              <div class="project__item">
-                <div class="project">
-                  <img src="images/simon-game.png" alt="" />
-                  <div class="project__info">
-                    <h3>Simon Game</h3>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">javaScript</span>
-                    <span class="tag">jQuery</span>
-                    <button class="live-demo-button">Live Demo</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project__item">
-                <div class="project">
-                  <img src="images/simon-game.png" alt="" />
-                  <div class="project__info">
-                    <h3>Simon Game</h3>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">javaScript</span>
-                    <span class="tag">jQuery</span>
-                    <button class="live-demo-button">Live Demo</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project__item">
-                <div class="project">
-                  <img src="images/simon-game.png" alt="" />
-                  <div class="project__info">
-                    <h3>Simon Game</h3>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">javaScript</span>
-                    <span class="tag">jQuery</span>
-                    <button class="live-demo-button">Live Demo</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project__item">
-                <div class="project">
-                  <img src="images/simon-game.png" alt="" />
-                  <div class="project__info">
-                    <h3>Simon Game</h3>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">javaScript</span>
-                    <span class="tag">jQuery</span>
-                    <button class="live-demo-button">Live Demo</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project__item">
-                <div class="project">
-                  <img src="images/simon-game.png" alt="" />
-                  <div class="project__info">
-                    <h3>Simon Game</h3>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">javaScript</span>
-                    <span class="tag">jQuery</span>
-                    <button class="live-demo-button">Live Demo</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project__item">
-                <div class="project">
-                  <img src="images/simon-game.png" alt="" />
-                  <div class="project__info">
-                    <h3>Simon Game</h3>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">javaScript</span>
-                    <span class="tag">jQuery</span>
-                    <button class="live-demo-button">Live Demo</button>
-                  </div>
-                </div>
-              </div>
+                  aboutWenLin.introduceMySelf();
+                </code>
+              </pre>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+  </div>
+  </section>
 
-    <!--Footer-->
-    <div class="footer">
-      <div class="contact">
-        <div class="email">Email: 82gogolee@gmail.com</div>
-        <div class="email">Github: wenlinlee-82gogolee</div>
-      </div>
-      <div class="copyright">
-        <p>Copyrights @ 2021 Wen-Lin Lee. All rights reserved.</p>
+  <!--Skills-->
+  <section class="skills" id="skills">
+    <div class="section skills__container">
+      <h2 class="section__title">Skills</h2>
+      <div class="section__underline"></div>
+      <!-- <h3 class="obj">aboutWenLin.skills</h3> -->
+      <div class="skills__wrap">
+        <div class="skills__list-items front">Front-End</div>
+        <div class="skills__list-items html">html</div>
+        <div class="skills__list-items css">CSS</div>
+        <div class="skills__list-items rwd">RWD</div>
+        <div class="skills__list-items grid">grid</div>
+        <div class="skills__list-items flexbox">flexbox</div>
+        <div class="skills__list-items javascript">javaScript(ES6)</div>
+        <div class="skills__list-items jquery">jQuery</div>
+        <div class="skills__list-items sass">SASS</div>
+        <div class="skills__list-items bootstrap">Bootstrap</div>
+        <div class="skills__list-items react">React</div>
+        <div class="skills__list-items back">Back-End</div>
+        <div class="skills__list-items express">express</div>
+        <div class="skills__list-items linux">Linux</div>
+        <div class="skills__list-items nodejs">Node.js</div>
+        <div class="skills__list-items mysql">MySQL</div>
+        <div class="skills__list-items vm">VM</div>
+        <div class="skills__list-items others">Others</div>
+        <div class="skills__list-items git">git</div>
+        <div class="skills__list-items vscode">VScode</div>
+        <div class="skills__list-items figma">Figma</div>
+        <div class="skills__list-items seo">SEO</div>
+        <div class="skills__list-items ga">GA</div>
+        <div class="skills__list-items npm">NPM</div>
+        <div class="skills__list-items github">gitHub</div>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="projects__container">
+        <h2 class="section__title">Projects</h2>
+        <div class="section__underline"></div>
+
+      <div class="projects__wrap">
+        <div class="project__items-list">
+          <div class="project__item">
+            <div class="project">
+              <img src="images/simon-game.png" alt="" />
+              <div class="project__info">
+                <h3 class="project__title">Simon Game</h3>
+                <button class="live-demo-button">Live Demo</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="project__item">
+            <div class="project">
+              <img src="images/simon-game.png" alt="" />
+              <div class="project__info">
+                <h3 class="project__title">Simon Game</h3>
+                <button class="live-demo-button">Live Demo</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="project__item">
+            <div class="project">
+              <img src="images/simon-game.png" alt="" />
+              <div class="project__info">
+                <h3 class="project__title">Simon Game</h3>
+                <button class="live-demo-button">Live Demo</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section contact__container">
+      <address class="contact__wrap">
+          <h2 class="section__title">Contact Me</h2>
+          <div class="section__underline"></div>
+
+        <div class="contact__list">
+          <!-- <h3 class="obj">aboutWenLin.email</h3> -->
+          <a href="mailto:82gogolee@gmail.com" class="contact__item">
+            Email Me
+          </a>
+          <!-- <h3 class="obj">aboutWenLin.gitHub</h3> -->
+          <a href="https://github.com/wenlinlee-82gogolee" class="contact__item">
+            Visit my GitHub
+          </a>
+          <textarea name="comment" id="" cols="35" rows="5" placeholder="leave me a message..."
+            class="contact__comment"></textarea>
+        </div>
+  </section>
+  </main>
+
+  <footer class="footer">
+    <div class="copyright">
+      Copyright &copy; 2022 Wen-Lin Lee. All Rights Reserved.</p>
+    </div>
+  </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
