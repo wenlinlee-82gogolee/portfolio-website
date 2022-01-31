@@ -1,4 +1,3 @@
-// $color-primary: #161e54;
 $color-primary: #14274e;
 $color-primary-dark: #394867;
 $color-empasize: #ff5151;
@@ -9,7 +8,7 @@ $color-shadow: #000;
 $color-secondary: #88e0ef;
 $font-primary: 'Ubuntu', sans-serif;
 $font-bold: 'Open Sans Condensed', sans-serif;
-$font-secondary: 'Fira Code', monospace;
+$font-code: 'Fira Code', monospace;
 
 $phone: 37.5em;
 $tablet-portrait: 56.25em;
@@ -65,19 +64,19 @@ body {
     list-style-type: st;
     align-items: center;
     justify-content: center;
-    height: 8rem;
+    height: 5rem;
   }
 
   &__list {
-    font-size: 3.5rem;
+    font-size: 2rem;
     text-decoration: none;
     color: $color-grey-light;
-    padding: 0 0.8rem;
     margin: 0 3.5rem;
   }
 
   &__list:hover {
     transform: skewY(0.5deg) skewX(5deg) scale(1.1);
+    color: $color-secondary;
   }
 }
 .sticky {
@@ -90,10 +89,6 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
-.sticky a:hover {
-  color: $color-primary;
-}
-
 .header {
   display: flex;
   justify-content: center;
@@ -204,13 +199,12 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 1rem;
+    margin: 1rem auto;
   }
   code {
-    font-family: $font-secondary;
+    font-family: $font-code;
   }
   &__meCode {
-    font-family: $font-secondary;
     color: $color-grey-light;
   }
   .value {
@@ -220,16 +214,22 @@ body {
     color: $color-grey-light;
     width: 5%;
   }
+  &__link {
+    color: $color-secondary;
+    text-decoration: none;
+    &:hover {
+      color: $color-empasize;
+    }
+  }
 }
 
 .skills {
   &__container {
-    // clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 100%, 0% 100%);
-    background-color: lighten($color-primary-dark, 5%);
+    background-color: lighten($color-primary-dark, 2%);
     z-index: 5;
   }
   &__wrap {
-    margin: 5rem;
+    margin: 5rem auto;
     max-width: 120rem;
     height: 100%;
     width: 100%;
@@ -247,9 +247,15 @@ body {
       'git npm vscode figma seo'
       'github ga . . .';
 
+    .front,
+    .back,
+    .others {
+      background-color: $color-primary;
+      font-weight: 500;
+    }
+
     .front {
       grid-area: front;
-      background-color: darken($color-primary, 5%);
     }
     .html {
       grid-area: html;
@@ -283,7 +289,6 @@ body {
     }
     .back {
       grid-area: back;
-      background-color: darken($color-primary, 5%);
     }
     .npm {
       grid-area: npm;
@@ -302,7 +307,6 @@ body {
     }
     .others {
       grid-area: others;
-      background-color: darken($color-primary, 5%);
     }
     .git {
       grid-area: git;
@@ -334,7 +338,7 @@ body {
     margin: 0.5rem;
     padding: 0.5rem;
     font-size: 2rem;
-    background-color: $color-primary;
+    background-color: lighten($color-primary, 2%);
     border-radius: 5px;
     text-align: center;
     color: $color-grey-light;
@@ -345,16 +349,13 @@ body {
   &__container {
     background-color: $color-primary-dark;
     padding: 3rem;
-    height: 95vh;
-
-    clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 100%, 0 60%);
 
     .section__underline {
       margin: 0 auto;
     }
   }
   &__wrap {
-    margin: 5rem;
+    margin: 5rem auto;
   }
 
   .project__items-list {
@@ -410,22 +411,11 @@ body {
   }
 }
 .contact {
-  // clip-path: polygon(0 30%, 50% 0, 100% 30%, 100% 100%, 0% 100%);
-  margin-top: -38vh;
-  height: 90vh;
-
   address {
     all: initial;
-    margin-top: 35rem;
   }
   &__container {
-    // background-color: darken($color-primary-dark, 10%);
-
-    background-image: url('/images/nasa.jpg');
-    background-attachment: fixed;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: lighten($color-primary-dark, 2%);
   }
 
   .section__underline {
@@ -457,6 +447,13 @@ body {
     margin: 3rem auto;
     border: none;
     background-color: $color-grey-light;
+
+    &:hover {
+      background-color: darken($color-grey-light, 3%);
+    }
+    &:focus {
+      outline: none;
+    }
   }
 }
 
@@ -466,7 +463,7 @@ body {
   color: $color-grey-light;
   text-align: center;
   padding: 1rem;
-  background-color: $color-primary-dark;
+  background-color: $color-primary;
 
   /* background-image: url('nasa.jpg'); */
   background-attachment: fixed;

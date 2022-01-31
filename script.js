@@ -16,21 +16,7 @@ const aboutWenLin = {
   location: 'Taipei, Taiwan',
   language: ['mandarin', 'english', 'taiwanese'],
   education: 'Bachelor of Business Administration',
-  skills: [
-    'html',
-    'css',
-    'javaScript',
-    'react',
-    'jQuery',
-    'bootstrap',
-    'sass',
-    'npm',
-    'mySQL',
-    'linux',
-    'figma',
-    'git',
-    'github',
-  ],
+  skills: ['front-end', 'back-end', 'others'],
   desiredJobPosition: 'Front-end developer',
   introduceMySelf: function () {
     console.log(`I'M ${this.name[1].toUpperCase()}
