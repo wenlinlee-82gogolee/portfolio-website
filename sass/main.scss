@@ -1,20 +1,22 @@
 $color-primary: #14274e;
 $color-primary-dark: #394867;
 $color-empasize: #ff5151;
-$color-grey-light: #f1f6f9;
 $color-grey-dark: #9ba4b4;
-$color-shadow: #000;
-
+$shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+$color-grey-light: #f1f6f9;
 $color-secondary: #88e0ef;
 $font-primary: 'Ubuntu', sans-serif;
 $font-bold: 'Open Sans Condensed', sans-serif;
 $font-code: 'Fira Code', monospace;
 
-$phone: 37.5em;
-$tablet-portrait: 56.25em;
-$tablet-landscape: 75em;
-$desktop: 112.5em;
-$big-sesktop: 112.6em;
+$bp-xl: 78.125em; // 1250px
+$bp-lg: 71.875em; // 1150px
+$bp-m: 65.625em; // 1050px
+$bp-ms: 52.25em; // 836px
+$bp-s: 43.75em; // 700px
+$bp-xs: 32.125em; // 514px
+$bp-xxs: 29.2875em; // 467px
+$bp-xxxs: 25.125em; // 402px
 
 *,
 *::after,
@@ -28,6 +30,28 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @media (max-width: $bp-xl) {
+    font-size: 60%;
+  }
+  @media (max-width: $bp-lg) {
+    font-size: 57%;
+  }
+  @media (max-width: $bp-m) {
+    font-size: 55%;
+  }
+  @media (max-width: $bp-ms) {
+    font-size: 50%;
+  }
+  @media (max-width: $bp-xs) {
+    font-size: 48%;
+  }
+  @media (max-width: $bp-xxs) {
+    font-size: 46%;
+  }
+  @media (max-width: $bp-xxxs) {
+    font-size: 45%;
+  }
 }
 
 body {
@@ -35,7 +59,7 @@ body {
   font-weight: 300;
   background-color: $color-grey-light;
   overflow-x: hidden;
-  width: 100%;
+  max-width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -46,10 +70,10 @@ body {
     box-shadow: inset 0 0 5px grey;
   }
   &-thumb {
-    background: darken($color-empasize, 10%);
+    background: darken($color-empasize, 5%);
     border-radius: 10px;
     &:hover {
-      background: lighten($color-empasize, 10%);
+      background: lighten($color-empasize, 5%);
       border-radius: 10px;
     }
   }
@@ -61,7 +85,6 @@ body {
 
   &__container {
     display: flex;
-    list-style-type: st;
     align-items: center;
     justify-content: center;
     height: 5rem;
@@ -72,11 +95,14 @@ body {
     text-decoration: none;
     color: $color-grey-light;
     margin: 0 3.5rem;
-  }
 
-  &__list:hover {
-    transform: skewY(0.5deg) skewX(5deg) scale(1.1);
-    color: $color-secondary;
+    &:hover {
+      transform: skewY(0.5deg) skewX(5deg) scale(1.1);
+      color: $color-secondary;
+    }
+    &:focus {
+      outline: none;
+    }
   }
 }
 .sticky {
@@ -84,11 +110,12 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
-  background-color: $color-empasize;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  background-color: rgba($color-empasize, 0.8);
+  box-shadow: $shadow;
   z-index: 10;
 }
+
 .header {
   display: flex;
   justify-content: center;
@@ -101,9 +128,29 @@ body {
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
 
+  @media (max-width: $bp-ms) {
+    height: 70vh;
+  }
+  &__text-box {
+    max-width: 120rem;
+
+    @media (max-width: $bp-s) {
+      margin: 0 8rem;
+    }
+    @media (max-width: $bp-xs) {
+      margin: 0 5rem;
+    }
+    @media (max-width: $bp-xxs) {
+      margin: 0 2rem;
+    }
+    @media (max-width: $bp-xxxs) {
+      margin: 0 1rem;
+    }
+  }
+
   &__text-box &__text {
     color: $color-grey-light;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     font-weight: 300;
   }
   &__text-main {
@@ -188,31 +235,73 @@ body {
 
 .about {
   margin-top: -20vh;
-  letter-spacing: 0.1rem;
-  font-size: 1.9rem;
+
   &__container {
     background-color: $color-primary-dark;
-    padding-top: 20rem;
+    padding-top: 18rem;
   }
 
   &__wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin: 1rem auto;
+    margin: 2rem;
+    max-width: 120rem;
+
+    @media (max-width: $bp-m) {
+      flex-direction: column-reverse;
+    }
+    .about__image {
+      // width: 20%;
+      .hi-image {
+        width: 35rem;
+
+        @media (max-width: $bp-xl) {
+          width: 30rem;
+          margin-left: 3rem;
+        }
+        @media (max-width: $bp-lg) {
+          width: 25rem;
+          margin-left: 5rem;
+        }
+        @media (max-width: $bp-m) {
+          margin-top: 2rem 0;
+        }
+      }
+    }
+    .about__content {
+      font-size: 2.2rem;
+      margin-right: 3rem;
+      letter-spacing: 0.1rem;
+
+      @media (max-width: $bp-xs) {
+        font-size: 2rem;
+      }
+      @media (max-width: $bp-xxs) {
+        font-size: 1.8rem;
+      }
+      @media (max-width: $bp-xxxs) {
+        font-size: 1.6rem;
+      }
+
+      code {
+        font-family: $font-primary;
+      }
+    }
   }
-  code {
-    font-family: $font-code;
+
+  .about__p {
+    margin: 3rem;
+    font-size: 2rem;
+    color: $color-grey-light;
+    font-weight: 400;
   }
+
   &__meCode {
     color: $color-grey-light;
   }
   .value {
     color: $color-secondary;
-  }
-  &__hi {
-    color: $color-grey-light;
-    width: 5%;
   }
   &__link {
     color: $color-secondary;
@@ -229,13 +318,13 @@ body {
     z-index: 5;
   }
   &__wrap {
-    margin: 5rem auto;
-    max-width: 120rem;
-    height: 100%;
-    width: 100%;
+    margin: 5rem;
+    width: 90vw;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 0.8rem;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 1fr));
+    // grid-template-columns: repeat(5, 1fr);
+    // grid-template-rows: repeat(8, 1fr);
 
     grid-template-areas:
       'front front front front front'
@@ -250,7 +339,7 @@ body {
     .front,
     .back,
     .others {
-      background-color: $color-primary;
+      background-color: rgba($color-primary, 0.7);
       font-weight: 500;
     }
 
@@ -335,55 +424,61 @@ body {
   }
 
   &__list-items {
-    margin: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.8rem;
     font-size: 2rem;
-    background-color: lighten($color-primary, 2%);
+    // background-color: lighten($color-primary, 2%);
+    background-color: rgba($color-primary, 0.4);
     border-radius: 5px;
     text-align: center;
     color: $color-grey-light;
+
+    @media (max-width: $bp-xxxs) {
+      font-size: 1.6rem;
+    }
   }
 }
 
 .projects {
   &__container {
     background-color: $color-primary-dark;
-    padding: 3rem;
+    padding: 5rem;
 
     .section__underline {
       margin: 0 auto;
     }
   }
   &__wrap {
-    margin: 5rem auto;
-  }
-
-  .project__items-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+    margin: 5rem auto;
+    // max-width: 120rem;
   }
   .project__item {
     color: $color-grey-light;
-    .live-demo-button {
+    .view-button {
       border: none;
       background-color: transparent;
+      border: 1px $color-grey-light solid;
+      padding: 0.5rem;
       color: $color-grey-light;
       font-size: 1.8rem;
       cursor: pointer;
       margin-top: 1.5rem;
+      &:hover {
+        color: $color-secondary;
+        border: $color-secondary 1px solid;
+      }
     }
     .project__title {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
   .project {
     position: relative;
-    width: 40rem;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: $shadow;
   }
   .project__info {
     font-size: 2.5rem;
@@ -392,7 +487,7 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
-    min-height: 100%;
+    height: 100%;
     transform: translateY(100%);
     transition: transform 0.2s ease-in;
     background: linear-gradient($color-primary 20%);
@@ -415,6 +510,7 @@ body {
     all: initial;
   }
   &__container {
+    padding-top: 6rem;
     background-color: lighten($color-primary-dark, 2%);
   }
 
@@ -425,8 +521,7 @@ body {
 
   &__list {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: 3rem auto;
   }
@@ -437,22 +532,76 @@ body {
     padding: 0.3rem 0;
 
     &:hover {
-      color: darken($color-grey-light, 10%);
+      color: $color-secondary;
     }
   }
-  &__comment {
-    resize: none;
-    padding: 1rem;
-    border-radius: 10px;
-    margin: 3rem auto;
-    border: none;
-    background-color: $color-grey-light;
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 7rem;
 
-    &:hover {
-      background-color: darken($color-grey-light, 3%);
+    ::placeholder {
+      font-family: $font-primary;
+      color: rgba($color-primary, 0.5);
     }
-    &:focus {
-      outline: none;
+    &__comment {
+      resize: none;
+      min-height: 15rem;
+      width: 100%;
+      padding: 1rem;
+      border-radius: 5px;
+      margin: 1rem auto;
+      border: none;
+      background-color: darken($color-grey-light, 3%);
+      box-shadow: $shadow;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    &__row1 {
+      display: flex;
+      margin-bottom: 1rem;
+
+      .form__name {
+        flex: 1 1 50%;
+        margin-right: 1rem;
+      }
+      .form__email {
+        flex: 1 1 50%;
+      }
+    }
+    &__name,
+    &__email,
+    &__subject {
+      background-color: darken($color-grey-light, 3%);
+      height: 3rem;
+      border-radius: 5px;
+      padding: 1rem;
+      border: none;
+      box-shadow: $shadow;
+      &:focus {
+        outline: none;
+      }
+    }
+    &__btn {
+      background-color: transparent;
+      border: 2px solid $color-empasize;
+      color: $color-empasize;
+      font-weight: 700;
+      width: 50%;
+      padding: 1rem;
+      margin: 2.5rem auto;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      box-shadow: $shadow;
+
+      &:hover {
+        background-color: $color-empasize;
+        color: $color-grey-light;
+      }
     }
   }
 }
@@ -480,20 +629,11 @@ body {
   [1200 - 1800] is where our normal styles apply
   1800px + :      Big desktop
   
-  1em=16px
-  600px=37.5em
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+
   put larger query infront so that when in conflict, the last of the order will apply
   */
-
-@media (max-width: 37.5em) {
-  html {
-    font-size: 50%;
-  }
-  body {
-    padding: 0;
-  }
-  .header {
-    background-image: none;
-    background-color: var(--color-container);
-  }
-}

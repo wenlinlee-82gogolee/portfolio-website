@@ -9,13 +9,34 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media (max-width: 78.125em) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 71.875em) {
+    html {
+      font-size: 57%; } }
+  @media (max-width: 65.625em) {
+    html {
+      font-size: 55%; } }
+  @media (max-width: 52.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 32.125em) {
+    html {
+      font-size: 48%; } }
+  @media (max-width: 29.2875em) {
+    html {
+      font-size: 46%; } }
+  @media (max-width: 25.125em) {
+    html {
+      font-size: 45%; } }
 
 body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   background-color: #f1f6f9;
   overflow-x: hidden;
-  width: 100%; }
+  max-width: 100%; }
 
 ::-webkit-scrollbar {
   width: 10px; }
@@ -23,10 +44,10 @@ body {
     background-color: #193162;
     box-shadow: inset 0 0 5px grey; }
   ::-webkit-scrollbar-thumb {
-    background: #ff1e1e;
+    background: #ff3838;
     border-radius: 10px; }
     ::-webkit-scrollbar-thumb:hover {
-      background: #ff8484;
+      background: #ff6b6b;
       border-radius: 10px; }
 
 .navbar {
@@ -34,7 +55,6 @@ body {
   transition: all 0.5s ease-in-out; }
   .navbar__container {
     display: flex;
-    list-style-type: st;
     align-items: center;
     justify-content: center;
     height: 5rem; }
@@ -43,18 +63,20 @@ body {
     text-decoration: none;
     color: #f1f6f9;
     margin: 0 3.5rem; }
-  .navbar__list:hover {
-    transform: skewY(0.5deg) skewX(5deg) scale(1.1);
-    color: #88e0ef; }
+    .navbar__list:hover {
+      transform: skewY(0.5deg) skewX(5deg) scale(1.1);
+      color: #88e0ef; }
+    .navbar__list:focus {
+      outline: none; }
 
 .sticky {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
-  background-color: #ff5151;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  background-color: rgba(255, 81, 81, 0.8);
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 10; }
 
 .header {
@@ -68,9 +90,26 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%); }
+  @media (max-width: 52.25em) {
+    .header {
+      height: 70vh; } }
+  .header__text-box {
+    max-width: 120rem; }
+    @media (max-width: 43.75em) {
+      .header__text-box {
+        margin: 0 8rem; } }
+    @media (max-width: 32.125em) {
+      .header__text-box {
+        margin: 0 5rem; } }
+    @media (max-width: 29.2875em) {
+      .header__text-box {
+        margin: 0 2rem; } }
+    @media (max-width: 25.125em) {
+      .header__text-box {
+        margin: 0 1rem; } }
   .header__text-box .header__text {
     color: #f1f6f9;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     font-weight: 300; }
   .header__text-main {
     font-size: 5rem;
@@ -135,26 +174,56 @@ body {
     border: 1px solid #ff5151; }
 
 .about {
-  margin-top: -20vh;
-  letter-spacing: 0.1rem;
-  font-size: 1.9rem; }
+  margin-top: -20vh; }
   .about__container {
     background-color: #394867;
-    padding-top: 20rem; }
+    padding-top: 18rem; }
   .about__wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin: 1rem auto; }
-  .about code {
-    font-family: "Fira Code", monospace; }
+    margin: 2rem;
+    max-width: 120rem; }
+    @media (max-width: 65.625em) {
+      .about__wrap {
+        flex-direction: column-reverse; } }
+    .about__wrap .about__image .hi-image {
+      width: 35rem; }
+      @media (max-width: 78.125em) {
+        .about__wrap .about__image .hi-image {
+          width: 30rem;
+          margin-left: 3rem; } }
+      @media (max-width: 71.875em) {
+        .about__wrap .about__image .hi-image {
+          width: 25rem;
+          margin-left: 5rem; } }
+      @media (max-width: 65.625em) {
+        .about__wrap .about__image .hi-image {
+          margin-top: 2rem 0; } }
+    .about__wrap .about__content {
+      font-size: 2.2rem;
+      margin-right: 3rem;
+      letter-spacing: 0.1rem; }
+      @media (max-width: 32.125em) {
+        .about__wrap .about__content {
+          font-size: 2rem; } }
+      @media (max-width: 29.2875em) {
+        .about__wrap .about__content {
+          font-size: 1.8rem; } }
+      @media (max-width: 25.125em) {
+        .about__wrap .about__content {
+          font-size: 1.6rem; } }
+      .about__wrap .about__content code {
+        font-family: "Ubuntu", sans-serif; }
+  .about .about__p {
+    margin: 3rem;
+    font-size: 2rem;
+    color: #f1f6f9;
+    font-weight: 400; }
   .about__meCode {
     color: #f1f6f9; }
   .about .value {
     color: #88e0ef; }
-  .about__hi {
-    color: #f1f6f9;
-    width: 5%; }
   .about__link {
     color: #88e0ef;
     text-decoration: none; }
@@ -166,18 +235,16 @@ body {
   z-index: 5; }
 
 .skills__wrap {
-  margin: 5rem auto;
-  max-width: 120rem;
-  height: 100%;
-  width: 100%;
+  margin: 5rem;
+  width: 90vw;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 0.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 1fr));
   grid-template-areas: 'front front front front front' 'html css javascript jquery react' ' sass rwd flexbox grid bootstrap' ' back back back back back' ' nodejs express linux vm mysql' 'others others others others others' 'git npm vscode figma seo' 'github ga . . .'; }
   .skills__wrap .front,
   .skills__wrap .back,
   .skills__wrap .others {
-    background-color: #14274e;
+    background-color: rgba(20, 39, 78, 0.7);
     font-weight: 500; }
   .skills__wrap .front {
     grid-area: front; }
@@ -233,47 +300,50 @@ body {
     grid-area: github; }
 
 .skills__list-items {
-  margin: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.8rem;
   font-size: 2rem;
-  background-color: #162b56;
+  background-color: rgba(20, 39, 78, 0.4);
   border-radius: 5px;
   text-align: center;
   color: #f1f6f9; }
+  @media (max-width: 25.125em) {
+    .skills__list-items {
+      font-size: 1.6rem; } }
 
 .projects__container {
   background-color: #394867;
-  padding: 3rem; }
+  padding: 5rem; }
   .projects__container .section__underline {
     margin: 0 auto; }
 
 .projects__wrap {
-  margin: 5rem auto; }
-
-.projects .project__items-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-gap: 1rem; }
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  margin: 5rem auto; }
 
 .projects .project__item {
   color: #f1f6f9; }
-  .projects .project__item .live-demo-button {
+  .projects .project__item .view-button {
     border: none;
     background-color: transparent;
+    border: 1px #f1f6f9 solid;
+    padding: 0.5rem;
     color: #f1f6f9;
     font-size: 1.8rem;
     cursor: pointer;
     margin-top: 1.5rem; }
+    .projects .project__item .view-button:hover {
+      color: #88e0ef;
+      border: #88e0ef 1px solid; }
   .projects .project__item .project__title {
-    font-size: 3rem; }
+    font-size: 2.5rem; }
 
 .projects .project {
   position: relative;
-  width: 40rem;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1); }
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3); }
 
 .projects .project__info {
   font-size: 2.5rem;
@@ -282,7 +352,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  min-height: 100%;
+  height: 100%;
   transform: translateY(100%);
   transition: transform 0.2s ease-in;
   background: linear-gradient(#14274e 20%);
@@ -303,6 +373,7 @@ body {
   all: initial; }
 
 .contact__container {
+  padding-top: 6rem;
   background-color: #3d4d6e; }
 
 .contact .section__underline {
@@ -311,8 +382,7 @@ body {
 
 .contact__list {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin: 3rem auto; }
 
@@ -322,19 +392,60 @@ body {
   font-size: 2rem;
   padding: 0.3rem 0; }
   .contact__item:hover {
-    color: #cddfea; }
+    color: #88e0ef; }
 
-.contact__comment {
-  resize: none;
-  padding: 1rem;
-  border-radius: 10px;
-  margin: 3rem auto;
-  border: none;
-  background-color: #f1f6f9; }
-  .contact__comment:hover {
-    background-color: #e6eff4; }
-  .contact__comment:focus {
-    outline: none; }
+.contact .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 7rem; }
+  .contact .form ::placeholder {
+    font-family: "Ubuntu", sans-serif;
+    color: rgba(20, 39, 78, 0.5); }
+  .contact .form__comment {
+    resize: none;
+    min-height: 15rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem auto;
+    border: none;
+    background-color: #e6eff4;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3); }
+    .contact .form__comment:focus {
+      outline: none; }
+  .contact .form__row1 {
+    display: flex;
+    margin-bottom: 1rem; }
+    .contact .form__row1 .form__name {
+      flex: 1 1 50%;
+      margin-right: 1rem; }
+    .contact .form__row1 .form__email {
+      flex: 1 1 50%; }
+  .contact .form__name, .contact .form__email, .contact .form__subject {
+    background-color: #e6eff4;
+    height: 3rem;
+    border-radius: 5px;
+    padding: 1rem;
+    border: none;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3); }
+    .contact .form__name:focus, .contact .form__email:focus, .contact .form__subject:focus {
+      outline: none; }
+  .contact .form__btn {
+    background-color: transparent;
+    border: 2px solid #ff5151;
+    color: #ff5151;
+    font-weight: 700;
+    width: 50%;
+    padding: 1rem;
+    margin: 2.5rem auto;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3); }
+    .contact .form__btn:hover {
+      background-color: #ff5151;
+      color: #f1f6f9; }
 
 .footer {
   font-size: 2rem;
@@ -357,15 +468,11 @@ body {
   [1200 - 1800] is where our normal styles apply
   1800px + :      Big desktop
   
-  1em=16px
-  600px=37.5em
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+
   put larger query infront so that when in conflict, the last of the order will apply
   */
-@media (max-width: 37.5em) {
-  html {
-    font-size: 50%; }
-  body {
-    padding: 0; }
-  .header {
-    background-image: none;
-    background-color: var(--color-container); } }

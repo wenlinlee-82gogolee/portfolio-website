@@ -9,19 +9,19 @@ const fixNav = function () {
 };
 window.addEventListener('scroll', fixNav);
 
-const aboutWenLin = {
-  name: ['李文菱', 'Wen-Lin Lee'],
-  email: '82gogolee@gmail.com',
-  nationality: 'Taiwan',
-  location: 'Taipei, Taiwan',
-  language: ['mandarin', 'english', 'taiwanese'],
-  education: 'Bachelor of Business Administration',
-  skills: ['front-end', 'back-end', 'others'],
-  desiredJobPosition: 'Front-end developer',
-  introduceMySelf: function () {
-    console.log(`I'M ${this.name[1].toUpperCase()}
-    `);
-  },
-};
+// const aboutWenLin = {
+//   name: ['李文菱', 'Wen-Lin Lee'],
+//   email: '82gogolee@gmail.com',
+//   nationality: 'Taiwan',
+//   location: 'Taipei, Taiwan',
+//   language: ['mandarin', 'english', 'taiwanese'],
+//   education: 'Bachelor of Business Administration',
+//   skills: ['front-end', 'back-end', 'others'],
+//   desiredJobPosition: 'Front-end developer',
+//   introduceMySelf: function () {
+//     console.log(`I'M ${this.name[1].toUpperCase()}
+//     `);
+//   },
+// };
 
-aboutWenLin.introduceMySelf();
+// aboutWenLin.introduceMySelf();
