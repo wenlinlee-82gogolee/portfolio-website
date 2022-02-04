@@ -214,12 +214,14 @@ body {
         .about__wrap .about__content {
           font-size: 1.6rem; } }
       .about__wrap .about__content code {
-        font-family: "Ubuntu", sans-serif; }
+        font-family: "Ubuntu", sans-serif;
+        letter-spacing: 0.2rem; }
   .about .about__p {
     margin: 3rem;
     font-size: 2rem;
     color: #f1f6f9;
-    font-weight: 400; }
+    font-weight: 400;
+    font-style: italic; }
   .about__meCode {
     color: #f1f6f9; }
   .about .value {
