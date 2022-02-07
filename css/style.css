@@ -9,25 +9,25 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth; }
-  @media (max-width: 78.125em) {
+  @media only screen and (max-width: 78.125em) {
     html {
       font-size: 60%; } }
-  @media (max-width: 71.875em) {
+  @media only screen and (max-width: 71.875em) {
     html {
       font-size: 57%; } }
-  @media (max-width: 65.625em) {
+  @media only screen and (max-width: 65.625em) {
     html {
       font-size: 55%; } }
-  @media (max-width: 52.25em) {
+  @media only screen and (max-width: 52.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 32.125em) {
+  @media only screen and (max-width: 32.125em) {
     html {
       font-size: 48%; } }
-  @media (max-width: 29.2875em) {
+  @media only screen and (max-width: 29.2875em) {
     html {
       font-size: 46%; } }
-  @media (max-width: 25.125em) {
+  @media only screen and (max-width: 25.125em) {
     html {
       font-size: 45%; } }
 
@@ -89,21 +89,21 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%); }
-  @media (max-width: 52.25em) {
+  @media only screen and (max-width: 52.25em) {
     .header {
-      height: 70vh; } }
+      height: 80vh; } }
   .header__text-box {
     max-width: 120rem; }
-    @media (max-width: 43.75em) {
+    @media only screen and (max-width: 43.75em) {
       .header__text-box {
         margin: 0 8rem; } }
-    @media (max-width: 32.125em) {
+    @media only screen and (max-width: 32.125em) {
       .header__text-box {
         margin: 0 5rem; } }
-    @media (max-width: 29.2875em) {
+    @media only screen and (max-width: 29.2875em) {
       .header__text-box {
         margin: 0 2rem; } }
-    @media (max-width: 25.125em) {
+    @media only screen and (max-width: 25.125em) {
       .header__text-box {
         margin: 0 1rem; } }
   .header__text-box .header__text {
@@ -120,7 +120,11 @@ body {
     margin-bottom: 4rem;
     animation-name: moveInRight;
     animation-duration: 0.8s;
-    animation-timing-function: ease-out; }
+    animation-timing-function: ease-out;
+    transition: all 0.5s ease-in-out; }
+    @media only screen and (max-width: 32.125em) {
+      .header__text-sub {
+        animation: none; } }
   .header__text-bold {
     font-family: "Open Sans Condensed", sans-serif;
     color: #f1b997;
@@ -130,6 +134,9 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
     transition: all 0.5s ease-in-out; }
+    @media only screen and (max-width: 32.125em) {
+      .header__text-bold {
+        animation: none; } }
 
 @keyframes moveInLeft {
   0% {
@@ -176,7 +183,7 @@ body {
 .about {
   margin-top: -20vh; }
   .about__container {
-    background-color: #42719f;
+    background-color: #3d6994;
     padding-top: 18rem; }
   .about__wrap {
     display: flex;
@@ -184,37 +191,35 @@ body {
     align-items: center;
     margin: 2rem;
     max-width: 120rem; }
-    @media (max-width: 65.625em) {
+    @media only screen and (max-width: 65.625em) {
       .about__wrap {
         flex-direction: column-reverse; } }
-    .about__wrap .about__image .hi-image {
-      width: 35rem; }
-      @media (max-width: 78.125em) {
-        .about__wrap .about__image .hi-image {
-          width: 30rem;
-          margin-left: 3rem; } }
-      @media (max-width: 71.875em) {
-        .about__wrap .about__image .hi-image {
-          width: 25rem;
-          margin-left: 5rem; } }
-      @media (max-width: 65.625em) {
-        .about__wrap .about__image .hi-image {
-          margin-top: 2rem 0; } }
+    .about__wrap .about__image {
+      align-self: end; }
+      .about__wrap .about__image .hi-image {
+        width: 30rem; }
+        @media only screen and (max-width: 71.875em) {
+          .about__wrap .about__image .hi-image {
+            width: 60%;
+            margin-left: 5rem; } }
+        @media only screen and (max-width: 32.125em) {
+          .about__wrap .about__image .hi-image {
+            width: 50%; } }
     .about__wrap .about__content {
       font-size: 2.2rem;
       margin-right: 3rem;
       letter-spacing: 0.1rem; }
-      @media (max-width: 32.125em) {
+      @media only screen and (max-width: 32.125em) {
+        .about__wrap .about__content {
+          font-size: 2.1rem; } }
+      @media only screen and (max-width: 29.2875em) {
         .about__wrap .about__content {
           font-size: 2rem; } }
-      @media (max-width: 29.2875em) {
-        .about__wrap .about__content {
-          font-size: 1.8rem; } }
-      @media (max-width: 25.125em) {
-        .about__wrap .about__content {
-          font-size: 1.6rem; } }
       .about__wrap .about__content code {
-        font-family: "Ubuntu", sans-serif; }
+        font-family: "Ubuntu Mono", monospace; }
+        @media only screen and (max-width: 660px) {
+          .about__wrap .about__content code {
+            font-family: "Ubuntu", sans-serif; } }
   .about .about__p {
     margin: 3rem;
     font-size: 2.5rem;
@@ -232,7 +237,7 @@ body {
       color: #f1b997; }
 
 .skills__container {
-  background-color: #4576a6;
+  background-color: #406e9b;
   z-index: 5; }
 
 .skills__wrap {
@@ -308,12 +313,12 @@ body {
   border-radius: 5px;
   text-align: center;
   color: #f1f6f9; }
-  @media (max-width: 25.125em) {
+  @media only screen and (max-width: 25.125em) {
     .skills__list-items {
       font-size: 1.6rem; } }
 
 .projects__container {
-  background-color: #42719f;
+  background-color: #3d6994;
   padding: 5rem; }
   .projects__container .section__underline {
     margin: 0 auto; }
@@ -376,7 +381,7 @@ body {
 
 .contact__container {
   padding-top: 6rem;
-  background-color: #4576a6; }
+  background-color: #406e9b; }
 
 .contact .section__underline {
   margin: 0 auto;
@@ -456,25 +461,7 @@ body {
   text-align: center;
   padding: 1rem;
   background-color: #374d74;
-  /* background-image: url('nasa.jpg'); */
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover; }
-
-/* 
-  Media Query Breakpoints
-  0 - 600px:      Phone
-  600 - 900px:    Tablet portrait
-  900 - 1200px:   Tablet landscape
-  [1200 - 1800] is where our normal styles apply
-  1800px + :      Big desktop
-  
-$bp-largest: 75em;   // 1200px
-$bp-large: 62.5em;   // 1000px
-$bp-medium: 50em;    // 800px;
-$bp-small: 37.5em;    // 600px;
-
-
-  put larger query infront so that when in conflict, the last of the order will apply
-  */
