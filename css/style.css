@@ -216,26 +216,17 @@ body {
         .about__wrap .about__content {
           font-size: 2rem; } }
       .about__wrap .about__content code {
-<<<<<<< HEAD
-        font-family: "Ubuntu", sans-serif;
-        letter-spacing: 0.2rem; }
-=======
         font-family: "Ubuntu Mono", monospace; }
         @media only screen and (max-width: 660px) {
           .about__wrap .about__content code {
             font-family: "Ubuntu", sans-serif; } }
->>>>>>> test-layout
   .about .about__p {
     margin: 3rem;
     font-size: 2.5rem;
     color: #f1f6f9;
-<<<<<<< HEAD
+    font-style: italic;
     font-weight: 400;
     font-style: italic; }
-=======
-    font-style: italic;
-    font-weight: 400; }
->>>>>>> test-layout
   .about__meCode {
     color: #f1f6f9; }
   .about .value {

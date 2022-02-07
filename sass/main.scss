@@ -285,15 +285,10 @@ body {
       }
 
       code {
-<<<<<<< HEAD
-        font-family: $font-primary;
-        letter-spacing: 0.2rem;
-=======
         font-family: $font-code;
         @media only screen and (max-width: 660px) {
           font-family: $font-primary;
         }
->>>>>>> test-layout
       }
     }
   }
