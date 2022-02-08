@@ -124,17 +124,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('./images/nasa.png');
+  background-image: url('/images/nasa.JPEG');
   height: 85vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-  //   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-  //   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-  //   height: 95vh;
-  // }
 
   @media only screen and (max-width: $bp-ms) {
     height: 80vh;
@@ -254,7 +249,7 @@ body {
 
   &__container {
     background-color: $color-primary-dark;
-    padding-top: 18rem;
+    padding-top: 10rem;
   }
 
   &__wrap {
