@@ -17,6 +17,8 @@ $bp-s: 43.75em; // 700px
 $bp-xs: 32.125em; // 514px
 $bp-xxs: 29.2875em; // 467px
 $bp-xxxs: 25.125em; // 402px
+$bp-xxxxs: 22.5em; // 360px
+$bp-smallest: 20em; // 320px
 
 *,
 *::after,
@@ -51,6 +53,9 @@ html {
   }
   @media only screen and (max-width: $bp-xxxs) {
     font-size: 45%;
+  }
+  @media only screen and (max-width: $bp-xxxxs) {
+    font-size: 40%;
   }
 }
 
@@ -119,13 +124,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/images/nasa.jpg');
+  background-image: url('/images/nasa.JPG');
   height: 90vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    height: 95vh;
+  }
 
   @media only screen and (max-width: $bp-ms) {
     height: 80vh;
@@ -263,12 +272,9 @@ body {
       .hi-image {
         width: 30rem;
 
-        @media only screen and (max-width: $bp-lg) {
-          width: 60%;
+        @media only screen and (max-width: $bp-s) {
+          width: 40%;
           margin-left: 5rem;
-        }
-        @media only screen and (max-width: $bp-xs) {
-          width: 50%;
         }
       }
     }
