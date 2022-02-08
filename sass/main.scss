@@ -264,6 +264,8 @@ body {
       flex-direction: column-reverse;
     }
     .about__image {
+      width: 100%;
+      height: 100%;
       align-self: end;
       .hi-image {
         width: 30rem;
