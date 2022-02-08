@@ -86,16 +86,11 @@ body {
   justify-content: center;
   align-items: center;
   background-image: url("/images/nasa.png");
-  height: 90vh;
+  height: 85vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
-  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-    .header {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-      clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-      height: 95vh; } }
   @media only screen and (max-width: 52.25em) {
     .header {
       height: 80vh; } }
@@ -187,59 +182,62 @@ body {
     width: 6rem;
     border: 1px solid #f1b997; }
 
-.about {
-  margin-top: -20vh; }
-  .about__container {
-    background-color: #3d6994;
-    padding-top: 18rem; }
-  .about__wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem;
-    max-width: 120rem; }
-    @media only screen and (max-width: 65.625em) {
-      .about__wrap {
-        flex-direction: column-reverse; } }
-    .about__wrap .about__image {
-      align-self: end; }
-      .about__wrap .about__image .hi-image {
-        width: 30rem; }
-        @media only screen and (max-width: 43.75em) {
-          .about__wrap .about__image .hi-image {
-            width: 40%;
-            margin-left: 5rem; } }
-    .about__wrap .about__content {
-      font-size: 2.2rem;
-      margin-right: 3rem;
-      letter-spacing: 0.1rem; }
-      @media only screen and (max-width: 32.125em) {
-        .about__wrap .about__content {
-          font-size: 2.1rem; } }
-      @media only screen and (max-width: 29.2875em) {
-        .about__wrap .about__content {
-          font-size: 2rem; } }
-      .about__wrap .about__content code {
-        font-family: "Ubuntu Mono", monospace; }
-        @media only screen and (max-width: 660px) {
-          .about__wrap .about__content code {
-            font-family: "Ubuntu", sans-serif; } }
-  .about .about__p {
-    margin: 3rem;
-    font-size: 2.5rem;
-    color: #f1f6f9;
-    font-style: italic;
-    font-weight: 400;
-    font-style: italic; }
-  .about__meCode {
-    color: #f1f6f9; }
-  .about .value {
-    color: #f9e0d1; }
-  .about__link {
-    color: #f9e0d1;
-    text-decoration: none; }
-    .about__link:hover {
-      color: #f1b997; }
+.about__container {
+  background-color: #3d6994;
+  padding-top: 18rem; }
+
+.about__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  max-width: 120rem; }
+  @media only screen and (max-width: 65.625em) {
+    .about__wrap {
+      flex-direction: column-reverse; } }
+  .about__wrap .about__image {
+    align-self: end; }
+    .about__wrap .about__image .hi-image {
+      width: 30rem; }
+      @media only screen and (max-width: 43.75em) {
+        .about__wrap .about__image .hi-image {
+          width: 40%;
+          margin-left: 5rem; } }
+  .about__wrap .about__content {
+    font-size: 2.2rem;
+    margin-right: 3rem;
+    letter-spacing: 0.1rem; }
+    @media only screen and (max-width: 32.125em) {
+      .about__wrap .about__content {
+        font-size: 2.1rem; } }
+    @media only screen and (max-width: 29.2875em) {
+      .about__wrap .about__content {
+        font-size: 2rem; } }
+    .about__wrap .about__content code {
+      font-family: "Ubuntu Mono", monospace; }
+      @media only screen and (max-width: 660px) {
+        .about__wrap .about__content code {
+          font-family: "Ubuntu", sans-serif; } }
+
+.about .about__p {
+  margin: 3rem;
+  font-size: 2.5rem;
+  color: #f1f6f9;
+  font-style: italic;
+  font-weight: 400;
+  font-style: italic; }
+
+.about__meCode {
+  color: #f1f6f9; }
+
+.about .value {
+  color: #f9e0d1; }
+
+.about__link {
+  color: #f9e0d1;
+  text-decoration: none; }
+  .about__link:hover {
+    color: #f1b997; }
 
 .skills__container {
   background-color: #406e9b;
