@@ -87,12 +87,20 @@ body {
 .navbar {
   background-color: $color-primary;
   transition: all 0.5s ease-in-out;
+  box-shadow: $shadow;
+  @media only screen and (max-width: $bp-xs) {
+    background-color: rgba($color-primary, 0.9);
+  }
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 5rem;
+
+    @media only screen and (max-width: $bp-xs) {
+      height: 6rem;
+    }
   }
 
   &__list {
@@ -100,6 +108,11 @@ body {
     text-decoration: none;
     color: $color-grey-light;
     margin: 0 3.5rem;
+
+    @media only screen and (max-width: $bp-xs) {
+      margin: 0 2rem;
+      font-size: 2.5rem;
+    }
 
     &:hover {
       transform: skewY(0.5deg) skewX(5deg) scale(1.1);
@@ -116,7 +129,6 @@ body {
   left: 0;
   right: 0;
   width: 100vw;
-  box-shadow: $shadow;
   z-index: 10;
 }
 
@@ -125,12 +137,12 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #5584ac;
-  // background-image: url('/images/nasa.jpg');
-  height: 85vh;
+  height: 90vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
 
   @media only screen and (max-width: $bp-ms) {
     height: 80vh;
@@ -138,17 +150,15 @@ body {
   &__text-box {
     max-width: 120rem;
 
-    @media only screen and (max-width: $bp-s) {
+    @media only screen and (max-width: $bp-lg) {
       margin: 0 8rem;
     }
     @media only screen and (max-width: $bp-xs) {
       margin: 0 5rem;
     }
     @media only screen and (max-width: $bp-xxs) {
-      margin: 0 2rem;
-    }
-    @media only screen and (max-width: $bp-xxxs) {
       margin: 0 1rem;
+      text-align: center;
     }
   }
 
@@ -162,6 +172,9 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1.3s;
     animation-timing-function: ease-out;
+    @media only screen and (max-width: $bp-xs) {
+      animation: none;
+    }
   }
 
   &__text-sub {
@@ -246,11 +259,11 @@ body {
 }
 
 .about {
-  // margin-top: -20vh;
+  margin-top: -20vh;
 
   &__container {
     background-color: $color-primary-dark;
-    padding-top: 10rem;
+    padding-top: 20rem;
   }
 
   &__wrap {
@@ -262,18 +275,19 @@ body {
 
     @media only screen and (max-width: $bp-m) {
       flex-direction: column-reverse;
+      align-self: center;
     }
     .about__image {
-      width: 100%;
+      max-width: 30rem;
       height: 100%;
       align-self: end;
-      .hi-image {
-        width: 30rem;
+      margin: 0 auto;
 
-        @media only screen and (max-width: $bp-s) {
-          width: 40%;
-          margin-left: 5rem;
-        }
+      @media only screen and (max-width: $bp-s) {
+        width: 25rem;
+      }
+      @media only screen and (max-width: $bp-xxs) {
+        width: 20rem;
       }
     }
     .about__content {
@@ -298,12 +312,13 @@ body {
   }
 
   .about__p {
-    margin: 3rem;
+    margin: 3rem 2rem;
     font-size: 2.5rem;
     color: $color-grey-light;
     font-style: italic;
     font-weight: 400;
     font-style: italic;
+    text-align: center;
   }
 
   &__meCode {
@@ -456,9 +471,13 @@ body {
   }
   &__wrap {
     display: grid;
-    grid-gap: 0.5rem;
+    grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
     margin: 5rem auto;
+
+    @media only screen and (max-width: $bp-xs) {
+      grid-gap: 2rem;
+    }
   }
   .project__item {
     color: $color-grey-light;
