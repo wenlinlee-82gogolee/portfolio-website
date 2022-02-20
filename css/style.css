@@ -95,7 +95,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #5584ac;
+  background: linear-gradient(200deg, #5584ac, #a3da8d);
+  background-image: url("/images/header.jpg");
   height: 90vh;
   background-attachment: fixed;
   background-position: center;
@@ -212,7 +213,7 @@ body {
     .about__wrap .about__image {
       max-width: 30rem;
       height: 100%;
-      align-self: end;
+      align-self: flex-end;
       margin: 0 auto; }
       @media only screen and (max-width: 43.75em) {
         .about__wrap .about__image {
