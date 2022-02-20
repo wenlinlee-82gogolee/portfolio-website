@@ -104,7 +104,7 @@ body {
   @media only screen and (min-width: 78.125em) {
     .header {
       background-attachment: fixed; } }
-  @media only screen and (max-width: 52.25em) {
+  @media only screen and (max-width: 65.625em) {
     .header {
       height: 80vh; } }
   .header__text-box {
