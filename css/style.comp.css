@@ -30,6 +30,9 @@ html {
   @media only screen and (max-width: 25.125em) {
     html {
       font-size: 45%; } }
+  @media only screen and (max-width: 22.5em) {
+    html {
+      font-size: 40%; } }
 
 body {
   font-family: "Ubuntu", sans-serif;
@@ -52,17 +55,28 @@ body {
 
 .navbar {
   background-color: #374d74;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.5s ease-in-out;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 32.125em) {
+    .navbar {
+      background-color: rgba(55, 77, 116, 0.9); } }
   .navbar__container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 5rem; }
+    @media only screen and (max-width: 32.125em) {
+      .navbar__container {
+        height: 6rem; } }
   .navbar__list {
     font-size: 2.2rem;
     text-decoration: none;
     color: #f1f6f9;
     margin: 0 3.5rem; }
+    @media only screen and (max-width: 32.125em) {
+      .navbar__list {
+        margin: 0 2rem;
+        font-size: 2.5rem; } }
     .navbar__list:hover {
       transform: skewY(0.5deg) skewX(5deg) scale(1.1);
       color: #feb764; }
@@ -75,26 +89,27 @@ body {
   left: 0;
   right: 0;
   width: 100vw;
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 10; }
 
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/images/nasa.jpg");
+  background-image: url("../images/header.jpg");
   height: 90vh;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%); }
-  @media only screen and (max-width: 52.25em) {
+  @media only screen and (min-width: 78.125em) {
+    .header {
+      background-attachment: fixed; } }
+  @media only screen and (max-width: 65.625em) {
     .header {
       height: 80vh; } }
   .header__text-box {
     max-width: 120rem; }
-    @media only screen and (max-width: 43.75em) {
+    @media only screen and (max-width: 71.875em) {
       .header__text-box {
         margin: 0 8rem; } }
     @media only screen and (max-width: 32.125em) {
@@ -102,10 +117,8 @@ body {
         margin: 0 5rem; } }
     @media only screen and (max-width: 29.2875em) {
       .header__text-box {
-        margin: 0 2rem; } }
-    @media only screen and (max-width: 25.125em) {
-      .header__text-box {
-        margin: 0 1rem; } }
+        margin: 0 1rem;
+        text-align: center; } }
   .header__text-box .header__text {
     color: #f1f6f9;
     letter-spacing: 0.2rem;
@@ -115,6 +128,9 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1.3s;
     animation-timing-function: ease-out; }
+    @media only screen and (max-width: 32.125em) {
+      .header__text-main {
+        animation: none; } }
   .header__text-sub {
     font-size: 4rem;
     margin-bottom: 4rem;
@@ -184,7 +200,7 @@ body {
   margin-top: -20vh; }
   .about__container {
     background-color: #3d6994;
-    padding-top: 18rem; }
+    padding-top: 20rem; }
   .about__wrap {
     display: flex;
     justify-content: center;
@@ -193,18 +209,19 @@ body {
     max-width: 120rem; }
     @media only screen and (max-width: 65.625em) {
       .about__wrap {
-        flex-direction: column-reverse; } }
+        flex-direction: column-reverse;
+        align-self: center; } }
     .about__wrap .about__image {
-      align-self: end; }
-      .about__wrap .about__image .hi-image {
-        width: 30rem; }
-        @media only screen and (max-width: 71.875em) {
-          .about__wrap .about__image .hi-image {
-            width: 60%;
-            margin-left: 5rem; } }
-        @media only screen and (max-width: 32.125em) {
-          .about__wrap .about__image .hi-image {
-            width: 50%; } }
+      max-width: 30rem;
+      height: 100%;
+      align-self: flex-end;
+      margin: 0 auto; }
+      @media only screen and (max-width: 43.75em) {
+        .about__wrap .about__image {
+          width: 25rem; } }
+      @media only screen and (max-width: 29.2875em) {
+        .about__wrap .about__image {
+          width: 20rem; } }
     .about__wrap .about__content {
       font-size: 2.2rem;
       margin-right: 3rem;
@@ -221,12 +238,13 @@ body {
           .about__wrap .about__content code {
             font-family: "Ubuntu", sans-serif; } }
   .about .about__p {
-    margin: 3rem;
+    margin: 3rem 2rem;
     font-size: 2.5rem;
     color: #f1f6f9;
     font-style: italic;
     font-weight: 400;
-    font-style: italic; }
+    font-style: italic;
+    text-align: center; }
   .about__meCode {
     color: #f1f6f9; }
   .about .value {
@@ -247,7 +265,7 @@ body {
   display: grid;
   grid-gap: 1.2rem;
   grid-template-columns: repeat(auto-fill, minmax(min-content, 1fr));
-  grid-template-areas: 'front front front front front' 'html css javascript jquery react' ' sass rwd flexbox grid bootstrap' ' back back back back back' ' nodejs express linux vm mysql' 'others others others others others' 'git npm vscode figma seo' 'github ga . . .'; }
+  grid-template-areas: 'front front front front front' 'html css javascript jquery vue' ' sass rwd flexbox grid bootstrap' ' back back back back back' ' nodejs express linux firebase mongodb' 'others others others others others' 'git npm vscode figma seo'; }
   .skills__wrap .front,
   .skills__wrap .back,
   .skills__wrap .others {
@@ -326,9 +344,12 @@ body {
 
 .projects__wrap {
   display: grid;
-  grid-gap: 0.5rem;
+  grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
   margin: 5rem auto; }
+  @media only screen and (max-width: 32.125em) {
+    .projects__wrap {
+      grid-gap: 2rem; } }
 
 .projects .project__item {
   color: #f1f6f9; }

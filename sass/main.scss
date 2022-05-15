@@ -352,13 +352,12 @@ body {
 
     grid-template-areas:
       'front front front front front'
-      'html css javascript jquery react'
+      'html css javascript jquery vue'
       ' sass rwd flexbox grid bootstrap'
       ' back back back back back'
-      ' nodejs express linux vm mysql'
+      ' nodejs express linux firebase mongodb'
       'others others others others others'
-      'git npm vscode figma seo'
-      'github ga . . .';
+      'git npm vscode figma seo';
 
     .front,
     .back,
